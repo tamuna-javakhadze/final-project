@@ -432,10 +432,61 @@
     display: flex;
 }
 .form-box{
-    padding: 50px 0 50px 0;
+    padding-top: 30px;
     width: 747px;
 }
-
+#form{
+    margin-top: 30px;
+}
+.all-input-wraper{
+    display: flex;
+    justify-content: space-around;
+}
+.input-wraper{
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.label{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color: grey;
+}
+.input{
+    display: block;
+    width: 300px;
+    height: 45px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color: grey;
+    padding: 0 20px 0 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(231, 231, 231);
+}
+.input:focus{
+    outline: none;
+}
+.input::placeholder{
+    color: rgb(201, 200, 200);
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+.button-form{
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 670px;
+    height: 45px;
+    background-image: linear-gradient(90deg, rgb(230, 32, 75), rgb(255, 113, 31));
+    border-style: none;
+    font-size: 15px;
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
 
 
 
