@@ -118,3 +118,34 @@ setInterval(()=> {
 slide();
 
 
+//  form
+
+let form = document.getElementById("form");
+
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    let error = {};
+
+    let firstNameVal = document.getElementById("first-name").value;
+    if(firstNameVal == ""){
+        error.firstname = "name field can't be empty";
+    }
+
+    let passwordVal1 = document.getElementById("password1").value;
+    let passwordVal2 = document.getElementById("password2").value;
+    if(passwordVal1 == ""){
+        error.password1 = "password field can't be empty";
+    }
+    if(passwordVal1 != passwordVal2){
+        error.password2 = "password doesn't match";
+    }
+
+    console.log(error);
+    
+    // for(let key in error){
+    //     let span = document.getElementById("error_" + key);
+    //     if(span){
+    //         span.innerText = error[key];
+    //     }
+    // }
+});

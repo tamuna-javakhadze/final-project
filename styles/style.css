@@ -487,18 +487,11 @@
     color: white;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.error{
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    color: red;
+}
 
 /* footer */
 footer{
