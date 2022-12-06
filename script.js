@@ -125,27 +125,70 @@ let form = document.getElementById("form");
 form.addEventListener("submit", function(event){
     event.preventDefault();
     let error = {};
-
+// first name
     let firstNameVal = document.getElementById("first-name").value;
     if(firstNameVal == ""){
-        error.firstname = "name field can't be empty";
+        error.firstname = "please fill out the field above";
     }
-
+// last name
+    let lastNameVal = document.getElementById("last-name").value;
+    if(lastNameVal == ""){
+        error.lastname = "please fill out the field above";
+    }
+// email
+    let emailVal = document.getElementById("email").value;
+    if(emailVal == ""){
+        error.emailVal = "please fill out the field above";
+    }
+// phone
+    let phoneVal = document.getElementById("phone").value;
+    if(phoneVal == ""){
+        error.phoneVal = "please fill out the field above";
+    }
+// password
     let passwordVal1 = document.getElementById("password1").value;
     let passwordVal2 = document.getElementById("password2").value;
     if(passwordVal1 == ""){
-        error.password1 = "password field can't be empty";
+        error.password1 = "please fill out this field above";
+    }
+    if(passwordVal2 == ""){
+        error.password2 = "please fill out this field above";
     }
     if(passwordVal1 != passwordVal2){
         error.password2 = "password doesn't match";
     }
 
     console.log(error);
+
+// clear
+    document.querySelectorAll(".error").forEach((item) => {
+        item.innerText = "";
+    });
     
-    // for(let key in error){
-    //     let span = document.getElementById("error_" + key);
-    //     if(span){
-    //         span.innerText = error[key];
-    //     }
-    // }
+    for(let key in error){
+        let span = document.getElementById("error_" + key);
+        if(span){
+            span.innerText = error[key];
+        }
+    }
+
+// submit
+    if(Object.keys(error).length == 0){
+        form.submit();
+    }
+});
+
+let password = document.getElementById("password1");
+let icon = document.getElementById("show-icon");
+
+icon.addEventListener("click", function(){
+    if(password.type == "password"){
+        password.setAttribute("type", "text");
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    }else{
+        password.setAttribute("type", "password");
+        icon.classList.add("fa-eye");
+        icon.classList.remove("fa-eye-slash");
+    }
 });

@@ -465,6 +465,23 @@
     border-width: 1px;
     border-color: rgb(231, 231, 231);
 }
+.relative{
+    position: relative;
+}
+.fa-eye{
+    position: absolute;
+    left: 102%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.fa-eye-slash{
+    position: absolute;
+    left: 102%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
 .input:focus{
     outline: none;
 }

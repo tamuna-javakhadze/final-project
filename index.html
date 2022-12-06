@@ -248,33 +248,39 @@
             <div class="form-box">
                 <h2 class="title center">Register Now</h2>
                 <p class="text grey center">The First 7 Day Trial Is Completely Free With The Teacher</p>
-                <form action="" id="form">
+                <form action="" id="form" method="post">
                     <div class="all-input-wraper">
                         <div class="input-wraper">
                             <label for="" class="label">First Name</label>
-                            <input type="text" class="input" id="first-name" name="firstname" placeholder="enter your first name" required>
-                            <p class="error" id="error_firstname"></p>
+                            <input type="text" class="input" id="first-name" name="firstname" placeholder="enter your first name">
+                            <span class="error" id="error_firstname"></span>
     
                             <label for="" class="label">Last Name</label>
-                            <input type="text" class="input" id="last-name" name="lastname" placeholder="enter your last name" required>
-                            <p class="error" id="error_lastname"></p>
+                            <input type="text" class="input" id="last-name" name="lastname" placeholder="enter your last name">
+                            <span class="error" id="error_lastname"></span>
     
                             <label for="" class="label">Email address</label>
-                            <input type="text" class="input" id="email" name="email" placeholder="enter your email" required>
-                            <p class="error" id="error_email"></p>
+                            <input type="text" class="input" id="email" name="email" placeholder="enter your email">
+                            <span class="error" id="error_email"></span>
                         </div>
                         <div class="input-wraper">
-                            <label for="" class="label">Mobile No*</label>
-                            <input type="number" class="input" id="phone" name="phone" placeholder="enter your phone number" required>
-                            <p class="error" id="error_phone"></p>
+                            <label for="" class="label">Phone No*</label>
+                            <input type="number" class="input" id="phone" name="phone" placeholder="enter your phone number">
+                            <span class="error" id="error_phone"></span>
     
                             <label for="" class="label">Password</label>
-                            <input type="password" class="input" id="password1" name="password1" placeholder="enter the password" required>
-                            <p class="error" id="error_password1"></p>
+                            <div class="relative">
+                                <input type="password" class="input" id="password1" name="password1" placeholder="enter the password">
+                                <i id="show-icon" class="fa-solid fa-eye"></i>
+                            </div>
+                            <span class="error" id="error_password1"></span>
     
                             <label for="" class="label">Repeat Password</label>
-                            <input type="password" class="input" id="password2" name="password2" placeholder="reenter the password" required>
-                            <p class="error" id="error_password2"></p>
+                            <div class="relative">
+                                <input type="password" class="input" id="password2" name="password2" placeholder="reenter the password">
+                            <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <span class="error" id="error_password2"></span>
                         </div>
                     </div>
                     <button type="submit" class="button-form">Get Started</button>
