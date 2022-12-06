@@ -164,7 +164,8 @@ form.addEventListener("submit", function(event){
     document.querySelectorAll(".error").forEach((item) => {
         item.innerText = "";
     });
-    
+
+// span 
     for(let key in error){
         let span = document.getElementById("error_" + key);
         if(span){
@@ -178,6 +179,7 @@ form.addEventListener("submit", function(event){
     }
 });
 
+// password show
 let password = document.getElementById("password1");
 let icon = document.getElementById("show-icon");
 
@@ -190,5 +192,26 @@ icon.addEventListener("click", function(){
         password.setAttribute("type", "password");
         icon.classList.add("fa-eye");
         icon.classList.remove("fa-eye-slash");
+    }
+});
+
+// email validation
+let emailField = document.getElementById("email");
+
+emailField.addEventListener("keyup", function(){
+    let emailVal = document.getElementById("email").value;
+    let errorSpan = document.getElementById("error-mail");
+    let emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    if(emailVal.match(emailPattern)){
+        errorSpan.innerText = "email is valid";
+        errorSpan.style.color = "green";
+    }else{
+        errorSpan.innerText = "email is not valid";
+        errorSpan.style.color = "red";
+    }
+// clear
+    if(emailVal == ""){
+        errorSpan.innerHTML = " ";
     }
 });
