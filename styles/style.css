@@ -132,42 +132,35 @@
 }
 
 /* section 2 */
-.flex{
-    display: flex;
-}
-.section3-bg{
-    background-image: url(../images/barbell.jpg);
-    width: 50%;
-    height: 700px;
+.bg-bmi{
+    background-image: url("../images/bmi-g.jpg");
+    width: 100%;
+    height: 657px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.block{
-    width: 25%;
-    background-color: rgb(31, 31, 31);
+.wraper-bmi{
+    width: 85%;
+    margin: 0 auto;
+    padding: 150px 0 100px 0;
+}
+.bmi{
+    text-align: center;
+}
+.wraper-calculator{
+    height: 200px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
-.dark{
-    background-color: rgb(20, 20, 20);
-}
-.text-box{
-    padding: 0 70px 0 70px;
-}
-.icon{
-    margin-bottom: 30px;
-    width:50px;
-}
-.title-h3{
-    font-size: 22px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: white;
-}
-.light-grey{
-    color: rgb(182, 182, 182);
+.h3-bmi{
+    font-size: 23px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: rgb(255, 72, 40);
 }
 
 /* section 3 */
@@ -508,6 +501,46 @@
     font-size: 13px;
     font-family: "Poppins", sans-serif;
     color: red;
+}
+
+
+/* section 7 */
+.flex{
+    display: flex;
+}
+.section3-bg{
+    background-image: url(../images/barbell.jpg);
+    width: 50%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.block{
+    width: 25%;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.dark{
+    background-color: rgb(20, 20, 20);
+}
+.text-box{
+    padding: 0 70px 0 70px;
+}
+.icon{
+    margin-bottom: 30px;
+    width:50px;
+}
+.title-h3{
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+.light-grey{
+    color: rgb(182, 182, 182);
 }
 
 /* footer */
