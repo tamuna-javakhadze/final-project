@@ -223,21 +223,25 @@ let weightInput = document.querySelector(".weight-input-field");
 let calculateButton = document.querySelector(".calculate");
 let result = document.querySelector(".result");
 let statement = document.querySelector(".result-statement");
-let BMI, height, weight;
+let BMI, round, height, weight;
 
 calculateButton.addEventListener("click", ()=>{
     height = heightInput.value;
     weight = weightInput.value;
     BMI = weight/(height**2); 
-    result.innerText = BMI;
+    round = Math.round(BMI);
+    result.innerText = `BMI = ${round}`;
 
     if(BMI < 18.5){
         statement.innerText = "Your BMI falls within the underweight range";    
     }else if((BMI > 18.5) && (BMI < 24.9)){
-        statement.innerText = "Your BMI falls within the normal or healthy weight range";
+        statement.innerText = "Your BMI falls within the healthy weight range";
     }else if((BMI > 25) && (BMI < 29.9 )){
         statement.innerText = "Your BMI falls within the overweight range";
-    }else{
+    }else if((BMI > 29.9 )){
         statement.innerText = "Your BMI falls within the obese range";
+    }else{
+        result.innerText = " ";
+        statement.innerText = "You need to fill both fields first";
     }
 });

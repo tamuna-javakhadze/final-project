@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="home">
         <div class="background">
             <div class="header-wraper">
                 <div class="header">
@@ -25,21 +25,22 @@
                     </div>
                     <div>
                         <ul class="nav-ul">
-                            <li><a class="nav-li" href="#">Home</a></li>
-                            <li><a class="nav-li" href="#">About Us</a></li>
-                            <li><a class="nav-li" href="#">Classes</a></li>
-                            <li><a class="nav-li" href="#">Trainers</a></li>
-                            <li><a class="nav-li" href="#">Gallery</a></li>
-                            <li><a class="nav-li" href="#">Contacts</a></li>
+                            <li><a class="nav-li" href="#home">Home</a></li>
+                            <li><a class="nav-li" href="#about">About Us</a></li>
+                            <li><a class="nav-li" href="#BMI">BMI calculator</a></li>
+                            <li><a class="nav-li" href="#classes">Classes</a></li>
+                            <li><a class="nav-li" href="#trainer">Trainers</a></li>
+                            <li><a class="nav-li" href="#gallery">Gallery</a></li>
+                            <li><a class="nav-li" href="#contacts">Contacts</a></li>
                         </ul>
                     </div>
                     <a href="#"><div class="sign-up">Sign In</div></a>
                 </div>
                 <div class="title-wraper">
                     <h1 class="main-title">FITNESS CLUB</h1>
-                    <h3 class="h3">BECOME ONE OF US</h3>
-                    <p class="text">Practice hundreds of workouts, yoga, dancing and karate 
-                        with our professional trainers
+                    <h3 class="h3">BECOME ONE OF US AND</h3>
+                    <p class="text">Practice hundreds of workouts, yoga and dancing 
+                        with the guidance of our professional trainers.
                     </p>
                     <a href="#"><div class="join">Sign Up Today</div></a>
                 </div>
@@ -47,7 +48,7 @@
         </div>
     </header>
 
-    <section>
+    <section id="about">
         <div class="wraper">
             <div class="video-wraper">
                 <img class="img-sec2" src="images/video.jpg" alt="video">
@@ -66,24 +67,22 @@
         </div>
     </section>
     
-    <section class="bg-bmi">
-        <div class="calculator-container wraper-bmi">
-            <div class="bmi">
-                <h2 class="title white">BMI CALCULATOR</h2>
-                <div class="wraper-calculator">
-                    <h3 class="h3-bmi">Height in meters:</h3>
-                    <input class="height-input-field" type="text">
-                    <h3 class="h3-bmi">weight in kilograms:</h3>
-                    <input class="weight-input-field" type="text"><br>
-                </div>
-                <button class="calculate"> Calculate</button>
-                <p class="result text white"></p>
-                <p class="result-statement text white"></p>
+    <section id="BMI" class="bg-bmi">
+        <div class="calculator-container">
+            <h2 class="title white">BMI CALCULATOR</h2>
+            <div class="wraper-calculator">
+                <h3 class="h3-bmi">Height in meters:</h3>
+                <input class="height-input-field bmi-input" type="text">
+                <h3 class="h3-bmi">weight in kilograms:</h3>
+                <input class="weight-input-field bmi-input" type="text"><br>
             </div>
+            <button class="calculate">Calculate</button>
+            <p class="result text white"></p>
+            <p class="result-statement text white"></p>
         </div>
     </section>
 
-    <section>
+    <section id="classes">
         <div class="wraper-sec3">
             <h2 class="title center">UNLIMITED CLASSES</h2>
             <div class="slider-wraper">
@@ -103,7 +102,7 @@
         </div>
     </section>
 
-    <section class="section4">
+    <section id="trainers" class="section4">
         <div class="sec3-wraper">
             <h2 class="title center">EXPERT TRAINERS</h2>
             <div class="ex-block-wraper">
@@ -310,7 +309,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contacts">
         <div class="wraper1">
             <div>
                 <h3 class="footer-h3">Phone</h3>
