@@ -1,8 +1,35 @@
 // "use strict"
 
-// section 3
-// slider 1
+// BMI calculator
+let heightInput = document.querySelector(".height-input-field");
+let weightInput = document.querySelector(".weight-input-field");
+let calculateButton = document.querySelector(".calculate");
+let result = document.querySelector(".result");
+let statement = document.querySelector(".result-statement");
+let BMI, round, height, weight;
 
+calculateButton.addEventListener("click", ()=>{
+    height = heightInput.value;
+    weight = weightInput.value;
+    BMI = weight/(height**2); 
+    round = Math.round(BMI);
+    result.innerText = `BMI = ${round}`;
+
+    if(BMI < 18.5){
+        statement.innerText = "Your BMI falls within the underweight range";    
+    }else if((BMI > 18.5) && (BMI < 24.9)){
+        statement.innerText = "Your BMI falls within the healthy weight range";
+    }else if((BMI > 25) && (BMI < 29.9 )){
+        statement.innerText = "Your BMI falls within the overweight range";
+    }else if((BMI > 29.9 )){
+        statement.innerText = "Your BMI falls within the obese range";
+    }else{
+        result.innerText = " ";
+        statement.innerText = "You need to fill both the fields first";
+    }
+});
+
+// slider
 data = [
     {
         id: 1,
@@ -119,7 +146,6 @@ slide();
 
 
 //  form
-
 let form = document.getElementById("form");
 
 form.addEventListener("submit", function(event){
@@ -217,31 +243,55 @@ emailField.addEventListener("keyup", function(){
 });
 
 
-// 
-let heightInput = document.querySelector(".height-input-field");
-let weightInput = document.querySelector(".weight-input-field");
-let calculateButton = document.querySelector(".calculate");
-let result = document.querySelector(".result");
-let statement = document.querySelector(".result-statement");
-let BMI, round, height, weight;
+// fetch
+// fetch
 
-calculateButton.addEventListener("click", ()=>{
-    height = heightInput.value;
-    weight = weightInput.value;
-    BMI = weight/(height**2); 
-    round = Math.round(BMI);
-    result.innerText = `BMI = ${round}`;
+let currentPage = 1;
+let post = document.getElementById("post-wraper");
 
-    if(BMI < 18.5){
-        statement.innerText = "Your BMI falls within the underweight range";    
-    }else if((BMI > 18.5) && (BMI < 24.9)){
-        statement.innerText = "Your BMI falls within the healthy weight range";
-    }else if((BMI > 25) && (BMI < 29.9 )){
-        statement.innerText = "Your BMI falls within the overweight range";
-    }else if((BMI > 29.9 )){
-        statement.innerText = "Your BMI falls within the obese range";
-    }else{
-        result.innerText = " ";
-        statement.innerText = "You need to fill both fields first";
+function getUsers(page){
+    fetch("https://reqres.in/api/users?page=" + page, {
+    METHOD: "GET"
+})
+.then(function(text){
+    if (text.status !== 200){
+        throw text.status;
     }
-});
+    return text.json();
+})
+.then(function(converted){
+    converted.data.forEach((item) => {
+        let user = document.createElement("p");
+        user.classList.add("user-name");
+        user.innerText = `${item.first_name} ${item.last_name}`;
+
+        let avatar = document.createElement("img");
+        avatar.src = item.avatar;
+        avatar.setAttribute("alrt", "avatar");
+        avatar.classList.add("avatar");
+
+        let nameAvatar = document.createElement("div");
+
+        nameAvatar.appendChild(user);
+        nameAvatar.appendChild(avatar);
+        post.appendChild(nameAvatar);
+    });
+})
+.catch(function(error){
+    if(error == 404){
+        let p = document.createElement("p");
+        p.textContent = "page not found";
+        p.classList.add("text");
+        post.appendChild(p);
+    }
+})
+}
+
+let loadMore = document.getElementById("loadmore");
+loadMore.addEventListener("click", function(){
+    currentPage++;
+    getUsers(currentPage);
+    loadMore.remove();
+})
+
+getUsers(currentPage);
