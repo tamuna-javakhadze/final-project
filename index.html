@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="responsive" >
+    <meta name="descriptions" content="fitnnes club">
+    <meta name="keywords" content="gutim, fitness club, gym, yoga, workout, dance classes, bmi, bmi calculator">
+    <meta name="author" content="Tamuna Javakhadze">
+    <meta name="robots" content="noindex,nofollow">
     <title>Gutim | Fitness Club</title>
     <link rel="icon" type="image/x-icon" href="images/www-icon.png">
     <link rel="stylesheet" href="styles/reset.css">
@@ -31,7 +36,6 @@
                             <li><a class="nav-li" href="#BMI">BMI calculator</a></li>
                             <li><a class="nav-li" href="#classes">Classes</a></li>
                             <li><a class="nav-li" href="#trainers">Trainers</a></li>
-                            <li><a class="nav-li" href="#gallery">Gallery</a></li>
                             <li><a class="nav-li" href="#contacts">Contacts</a></li>
                         </ul>
                     </div>
@@ -43,7 +47,7 @@
                     <p class="text">Practice hundreds of workouts, yoga and dancing 
                         with the guidance of our professional trainers.
                     </p>
-                    <a href="#"><div class="join">Sign Up Today</div></a>
+                    <button class="sign-up-today">Sign Up Today</button>
                 </div>
             </div>
         </div>
@@ -86,6 +90,7 @@
     <section id="classes">
         <div class="wraper-sec3">
             <h2 class="title center">UNLIMITED CLASSES</h2>
+            <hr class="hr-classes">
             <div class="slider-wraper">
                 <div class="arrow-wraper">
                     <button class="arrow" id="arrow-left">
@@ -106,6 +111,7 @@
     <section id="trainers" class="section4">
         <div class="sec3-wraper">
             <h2 class="title center">EXPERT TRAINERS</h2>
+            <hr class="hr-trainers">
             <div class="ex-block-wraper">
                 <div class="ex-block">
                     <img src="images/trainer-1.jpg" alt="trainer-image">
@@ -156,19 +162,20 @@
         </div>
     </section>
 
-    <section id="testimonials">
-        <div class="wraper-testimonioals">
-            <h2 class="title center">Our Crue</h2>
+    <section class="section5">
+        <div class="wraper-team">
+            <h2 class="title center white">Meet Our Team</h2>
+            <hr class="hr-team">
             <div id="post-wraper">
-
             </div>
             <button id="loadmore">Load More</button>
         </div>
     </section>
 
-    <section class="section5">
+    <section class="section6">
         <div class="wraper5">
             <h2 class="title center">MEMBERSHIP PLANS</h2>
+            <hr class="hr-membership">
             <div class="plans-wraper">
                 <div class="plan-box">
                     <div class="orange-head">
@@ -240,7 +247,7 @@
         </div>
     </section>
 
-    <section class="section6">
+    <section class="section7">
         <div class="form-wraper">
             <div class="form-box">
                 <h2 class="title center">Register Now</h2>
@@ -292,7 +299,6 @@
 
     <section>
         <div class="flex">
-            <div class="section3-bg"></div>
             <div class="block">
                 <div class="text-box">
                     <img class="icon" src="images/service-icon-1.png" alt="icon">
@@ -305,7 +311,10 @@
                     <p class="text light-grey">Aenean massa. Cum sociis Theme et natoque penatibus et magnis dis part urient montes.</p>
                 </div>
             </div>
-            <div class="block dark">
+
+            <div class="section3-bg"></div>
+            
+            <div class="block">
                 <div class="text-box">
                     <img class="icon" src="images/service-icon-3.png" alt="icon">
                     <h3 class="title-h3">Yoga</h3>
@@ -321,46 +330,54 @@
     </section>
 
     <footer id="contacts">
-        <div class="wraper1">
-            <div>
-                <h3 class="footer-h3">Phone</h3>
-                <a class="text white" href="tel:(123) 118 9999">
-                    (123) 118 9999
-                </a>
+        <div class="wraper-footer">
+            <div class="wraper1">
+                <div>
+                    <h3 class="footer-h3">Phone</h3>
+                    <a class="text white" href="tel:(123) 118 9999">
+                        <i class="fa-solid fa-phone"></i>
+                        (123) 118 9999
+                    </a>
+                </div>
+                <div>
+                    <h3 class="footer-h3">Address</h3>
+                    <a class="text white" href="https://www.google.com/maps/place/Kangnam+Rd,+Riverside,+CA+92508,+USA/@33.9048602,-117.331463,15.47z/data=!4m5!3m4!1s0x80dca56c2644ef41:0xdb62166f7eb3115c!8m2!3d33.9052156!4d-117.3301818">
+                        <i class="fa-solid fa-location-dot"></i>
+                        72 Kangnam, 45 Opal Point Suite 391
+                    </a>
+                </div>
+                <div>
+                    <h3 class="footer-h3">Email</h3>
+                    <a class="text white" href="mailto:example@Gutim.com">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        contactcompany@Gutim.com
+                    </a>
+                </div>
             </div>
-            <div>
-                <h3 class="footer-h3">Address</h3>
-                <a class="text white" href="https://www.google.com/maps/place/Kangnam+Rd,+Riverside,+CA+92508,+USA/@33.9048602,-117.331463,15.47z/data=!4m5!3m4!1s0x80dca56c2644ef41:0xdb62166f7eb3115c!8m2!3d33.9052156!4d-117.3301818">
-                    72 Kangnam, 45 Opal Point Suite 391
-                </a>
-            </div>
-            <div>
-                <h3 class="footer-h3">Email</h3>
-                <a class="text white" href="mailto:example@Gutim.com">
-                    contactcompany@Gutim.com
-                </a>
-            </div>
-        </div>
-        <div class="wraper2">
-            <p class="text white">Copyright ©2022 All rights reserved | This template is made with love by <a class="colorlib" href="#">Colorlib</a></p>
-            <a href="#" class="text white">Term&Use</a>
-            <a href="#" class="text white">Privacy Policy</a>
-            <div class="social-icons-wraper">
-                <a href="#">
-                    <div class="soc-i-circle">
-                        <i class="fa-brands fa-facebook-f fa-brands-footer"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="soc-i-circle">
-                        <i class="fa-brands fa-twitter fa-brands-footer"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="soc-i-circle">
-                        <i class="fa-brands fa-instagram fa-brands-footer"></i>
-                    </div>
-                </a>
+
+            <div class="footer-bg"></div>
+
+            <div class="wraper2">
+                <p class="text white">Copyright ©2022 All rights reserved | This template is made with love by <a class="colorlib" href="#">Colorlib</a></p>
+                <a href="#" class="text white">Term&Use</a>
+                <a href="#" class="text white">Privacy Policy</a>
+                <div class="social-icons-wraper">
+                    <a href="#">
+                        <div class="soc-i-circle">
+                            <i class="fa-brands fa-facebook-f fa-brands-footer"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="soc-i-circle">
+                            <i class="fa-brands fa-twitter fa-brands-footer"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="soc-i-circle">
+                            <i class="fa-brands fa-instagram fa-brands-footer"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
