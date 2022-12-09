@@ -7,18 +7,33 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.header-wraper1{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
 .header-wraper{
     width: 85%;
     margin: 0 auto;
     padding: 20px 0 20px 0;
 }
 .header{
+    width: 100%;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: background-color 1s ease;
+}
+.scroll{
+    background-color: rgb(34, 34, 34);
 }
 .nav-ul{
     width: 600px;
@@ -119,7 +134,7 @@
     transform: translate(-50%, -50%);
 }
 .video-wraper:hover{
-    width: 570px;
+    transform: scale(1.05);
     transition: all 0.5s ease-out;
     cursor: pointer;
 }

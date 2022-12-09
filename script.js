@@ -1,4 +1,47 @@
-// "use strict"
+"use strict"
+
+// scroll - header color smooth change
+var className = "inverted";
+var scrollTrigger = 30;
+
+window.onscroll = function() {
+  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+    document.getElementsByClassName("header")[0].classList.add(className);
+  } else {
+    document.getElementsByClassName("header")[0].classList.remove(className);
+  }
+};
+
+// scroll - header color change
+let myNav = document.getElementById("nav");
+
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 160 || document.documentElement.scrollTop >= 160) {
+    myNav.classList.add("scroll");
+  } else {
+    myNav.classList.remove("scroll");
+  }
+};
+
+// smooth scroll on click
+const links = document.querySelectorAll('.js-scroll');
+
+links.forEach(function (elem) {
+    elem.addEventListener('click', smoothScroll)
+});
+function smoothScroll(e) {
+    e.preventDefault();
+
+    const link = this.getAttribute("href");
+
+    const offsetTop = document.querySelector(link).offsetTop;
+
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    });
+}
 
 // BMI calculator
 let heightInput = document.querySelector(".height-input-field");
@@ -30,7 +73,7 @@ calculateButton.addEventListener("click", ()=>{
 });
 
 // slider
-data = [
+let data = [
     {
         id: 1,
         url: "images/cardio.jpg",
