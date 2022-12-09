@@ -1,0 +1,32 @@
+/* breackpoints: 1024, 768, 480, 320 */
+
+@media (max-width: 1067px) {
+    .wraper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-wraper{
+        max-width: 550px;
+        width: 100%;
+        margin-top: 50px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 940px) {
+    .arrow-wraper{
+        width: 90%;
+    }
+}
+
+@media (max-width: 840px) {
+    .arrow-wraper{
+        width: 100%;
+    }
+}
+
+@media (max-width: 456px) {
+    .hr-classes{
+        width: 200px;
+    }
+}

@@ -82,7 +82,7 @@ let data = [
     {
         id: 2,
         url: "images/muscle-training.jpg",
-        title: "Muscle Training"
+        title: "Boxing"
     },
     {
         id: 3,
