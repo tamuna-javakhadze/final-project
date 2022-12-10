@@ -43,6 +43,15 @@ function smoothScroll(e) {
     });
 }
 
+// burger bar
+let navigation = document.getElementById("navigation")
+let burger = document.getElementById("burger");
+
+burger.addEventListener("click", function(){
+    navigation.classList.toggle("activeNav");
+    burger.classList.toggle("active-burger");
+});
+
 // BMI calculator
 let heightInput = document.querySelector(".height-input-field");
 let weightInput = document.querySelector(".weight-input-field");
