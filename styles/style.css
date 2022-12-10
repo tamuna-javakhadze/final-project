@@ -72,7 +72,7 @@
     transition: all 0.5s ease-in;
 }
 .title-wraper{
-    max-width: 470px;
+    max-width: 540px;
     width: 100%;
     margin-top: 200px;
     color: white;
@@ -115,7 +115,7 @@
     border-color: white;
 }
 
-/* section 1 */
+/* about us */
 .wraper{
     width: 85%;
     margin: 0 auto;
@@ -174,7 +174,7 @@
     cursor: pointer;
 }
 
-/* section 2 */
+/* BMI */
 .bg-bmi{
     background-image: url("../images/bmi-g.jpg");
     width: 100%;
@@ -236,7 +236,7 @@
     border-color: white;
 }
 
-/* section 3 */
+/* slider - classes */
 .wraper-sec3{
     width: 85%;
     margin: 0 auto;
@@ -293,7 +293,7 @@
 @keyframes slide{
     0% {
         opacity: 0;
-        transform: translateX(-30%);
+        transform: translateX(-8%);
     }
     20% {
         opacity: 1;
@@ -305,7 +305,7 @@
     }
     100% {
         opacity: 0;
-        transform: translateX(30%);
+        transform: translateX(8%);
     }
 }
 .bg-image-slider{
@@ -352,7 +352,7 @@
     animation: fade;
 }
 
-/* section 4 */
+/* trainers */
 .section4{
     background-color: rgb(245, 245, 245);
 }
@@ -370,16 +370,23 @@
     text-align: center;
 }
 .ex-block-wraper{
+    width: 100%;
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .ex-block{
-    height: 410px;
+    width: 350px;
+    height: 370px;
     position: relative;
+    padding: 0 20px 0 20px;
+}
+.image-ex-block{
+    width: 100%;
 }
 .info-box{
-    width: 300px;
+    width: 80%;
     height: 100px;
     background-color: white;
     padding: 20px 0 20px 0;
@@ -409,7 +416,7 @@
     margin-top: 10px;
 }
 .box-text{
-    width: 250px;
+    width: 100%;
     text-align: center;
     font-size: 15px;
     font-family: "Poppins", sans-serif;
@@ -428,13 +435,16 @@
 .box-icon{
     color: black;
 }
+.i-trainers:hover{
+    color: rgb(255, 72, 40);
+}
 .info-box:hover .icon-wraper{
     display: block;
     display: flex;
     justify-content: space-between;
 }
 
-/* section 5 */
+/* fetch - team */
 .section5{
     background-color: rgb(19, 19, 19);
 }
@@ -442,6 +452,9 @@
     width: 85%;
     margin: 0 auto;
     padding: 80px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .hr-team{
     width: 320px;
@@ -451,18 +464,22 @@
 #post-wraper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+}
+.name-avatar-wraper{
+    padding: 0 35px 0 35px;
+    display: flex;
+    justify-content: space-around;
 }
 .user-name{
     margin-top: 50px;
-    font-size: 25px;
+    font-size: 18px;
     font-family: 'Cormorant Garamond', serif;
     color: rgb(255, 60, 0);
     text-align: center;
 }
 .avatar{
-    width: 164px;
-    height: 164px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     margin-top: 10px;
     border-radius: 100px;
@@ -472,7 +489,6 @@
     width: 120px;
     height: 40px;
     background-image: linear-gradient(90deg, rgb(230, 32, 75), rgb(255, 113, 31));
-    /* padding: 10px; */
     margin-top: 50px;
     font-size: 15px;
     font-family: "Poppins", sans-serif;
@@ -488,7 +504,7 @@
     border-color: white;
 }
 
-/* section 6 */
+/* membership plans*/
 .section6{
     background-color: rgb(250, 250, 250);
 }
@@ -505,6 +521,7 @@
 .plans-wraper{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .plan-box{
@@ -561,7 +578,7 @@
     color: white;
 }
 
-/* section 7 */
+/* form */
 .section7{
     background-color: rgb(245, 245, 245);
     padding: 100px 0 100px 0;
@@ -574,7 +591,10 @@
 }
 .form-box{
     padding-top: 30px;
-    width: 747px;
+    width: 66%;
+}
+.padding{
+    padding: 0 10px 0 10px;
 }
 #form{
     margin-top: 30px;
@@ -584,10 +604,13 @@
     justify-content: space-around;
 }
 .input-wraper{
+    max-width: 340px;
+    width: 45%;
     height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 20px 0 20px;
 }
 .label{
     font-size: 15px;
@@ -596,7 +619,7 @@
 }
 .input{
     display: block;
-    width: 300px;
+    width: 100%;
     height: 45px;
     font-size: 15px;
     font-family: "Poppins", sans-serif;
@@ -610,15 +633,17 @@
     position: relative;
 }
 .fa-eye{
+    color: grey;
     position: absolute;
-    left: 102%;
+    left: 87%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
 }
 .fa-eye-slash{
+    color: grey;
     position: absolute;
-    left: 102%;
+    left: 87%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -635,7 +660,7 @@
     display: block;
     margin: 0 auto;
     margin-top: 40px;
-    width: 670px;
+    width: 90%;
     height: 45px;
     background-image: linear-gradient(90deg, rgb(230, 32, 75), rgb(255, 113, 31));
     border-style: none;
@@ -661,7 +686,7 @@
 }
 
 
-/* section 8 */
+/* section 9 */
 .flex{
     display: flex;
 }
@@ -758,5 +783,3 @@ a.text:hover{
 .fa-brands-footer{
     font-size: 20px;
 }
-
-

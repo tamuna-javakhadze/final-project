@@ -81,7 +81,7 @@ let data = [
     },
     {
         id: 2,
-        url: "images/muscle-training.jpg",
+        url: "images/boxing.jpg",
         title: "Boxing"
     },
     {
@@ -212,11 +212,14 @@ function getUsers(page){
         avatar.setAttribute("alrt", "avatar");
         avatar.classList.add("avatar");
 
+        let nameAvatarWraper = document.createElement("div");
+        nameAvatarWraper.classList.add("name-avatar-wraper");
         let nameAvatar = document.createElement("div");
 
         nameAvatar.appendChild(user);
         nameAvatar.appendChild(avatar);
-        post.appendChild(nameAvatar);
+        nameAvatarWraper.appendChild(nameAvatar);
+        post.appendChild(nameAvatarWraper);
     });
 })
 .catch(function(error){

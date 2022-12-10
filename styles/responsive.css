@@ -1,5 +1,50 @@
 /* breackpoints: 1024, 768, 480, 320 */
 
+@media (max-width: 1115px) {
+    .ex-block:nth-child(3){
+        margin-top: 50px;
+    }
+    .ex-block-wraper{
+        justify-content: space-around;
+    }
+    .name-avatar-wraper{
+        width: 25%;
+    }
+    .plan-box{
+        margin-top: 50px;
+    }
+    .plans-wraper{
+        justify-content: space-around;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .block{
+        width: 100%;
+        flex-direction: row;
+        padding: 50px 0 50px 0;        
+    }
+    .section3-bg{
+        width: 100%;
+    }
+    .line{
+        height: 100%;
+        height: 2px;
+        background-color: white;
+    }
+    .wraper1{
+        padding-top: 50px;
+    }
+    .wraper2{
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-icons-wraper{
+        margin-top: 30px;
+    }
+}
+
 @media (max-width: 1067px) {
     .wraper{
         flex-direction: column;
@@ -11,6 +56,47 @@
         margin-top: 50px;
         padding: 0;
     }
+    .input{
+        padding: 0 10px 0 10px;
+    }
+    .input::placeholder{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 960px) {
+    .plan-box-wraper{
+        max-width: 410px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .input{
+        padding: 0 20px 0 20px;
+    }
+    .input::placeholder{
+        font-size: 12px;
+    }
+    .input-wraper{
+        width: 90%;
+    }
+    .registration-img-container{
+        display: none;
+    }
+    .form-box{
+        width: 100%;
+    }
+    .wraper1{
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-inf{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 940px) {
@@ -19,8 +105,60 @@
     }
 }
 
+@media (max-width: 919px) {
+    .name-avatar-wraper{
+        width: 33%;
+    }
+}
+
 @media (max-width: 840px) {
     .arrow-wraper{
+        width: 100%;
+    }
+    .ex-block:nth-child(2){
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .block{
+        flex-direction: column;
+    }
+    .text-box:nth-child(2){
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .name-avatar-wraper{
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .bg-image-slider{
+        height: 300px;
+    }
+    .slider-img-title{
+        font-size: 25px;
+    }
+    .dots-wraper{
+        top: 320px;
+    }
+}
+
+@media (max-width: 525px) {
+    .all-input-wraper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-box{
+        padding: 0 5% 0 5%;
+    }
+}
+
+@media (max-width: 468px) {
+    .name-avatar-wraper{
         width: 100%;
     }
 }
@@ -28,5 +166,44 @@
 @media (max-width: 456px) {
     .hr-classes{
         width: 200px;
+    }
+}
+
+@media (max-width: 455px) {
+    .hr-membership{
+        width: 245px;
+    }
+}
+
+@media (max-width: 430px) {
+    .ex-block{
+        width: 240px;
+        height: 255px;
+    }
+    .info-box{
+        width: 70%;
+        height: 70px;
+        bottom: 5%;
+    }
+    .sec4-h3{
+        font-size: 20px;
+    }
+    .sec4-text{
+        font-size: 13px;
+    }
+    .box-text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 377px) {
+    .hr-team{
+        width: 185px;
+    }
+}
+
+@media (max-width: 399px) {
+    .hr-trainers{
+        width: 185px;
     }
 }
