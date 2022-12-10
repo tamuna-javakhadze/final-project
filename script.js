@@ -1,5 +1,20 @@
 "use strict"
 
+// active
+const navItems = document.querySelectorAll('.nav-li')
+
+for (var i = 0; i < navItems.length; i++) {
+  navItems[i].addEventListener("click", function() {
+    var current = document.querySelector(".active");
+
+    if (current) {
+      current.classList.remove('active')
+    }
+
+    this.classList.add('active')
+  })
+}
+
 // scroll - header color smooth change
 var className = "inverted";
 var scrollTrigger = 30;
