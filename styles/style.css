@@ -47,6 +47,10 @@
 .nav-li{
     position: relative;
 }
+.active{
+    color: rgb(255, 72, 40);
+    font-weight: bold;
+}
 .nav-li:after{
     content: " ";
     position: absolute;
