@@ -66,7 +66,7 @@
 
 /* burger */
 @media (max-width: 1060px) {
-    .nav-sign{
+    .navigation{
         display: none;
     }
     .burger{
@@ -80,6 +80,7 @@
     .header.activeNav{
         width: 220px;
         height: 390px;
+        background-color: rgb(34, 34, 34);
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -87,11 +88,11 @@
         left: -40px;
         transition: all 0.5s ease-out;
     }
-    .header-wraper1.activeWrap1{
+    .header-wraper.activeWrap{
         flex-direction: column;
         margin-top: 20px;
     }
-    .nav-sign.avtiveNavSign{
+    .navigation.avtiveNavSign{
         display: flex;
         flex-direction: column;
         margin-top: 20px;
@@ -113,7 +114,7 @@
     .header{
         padding: 20px 0 20px 0;
     }
-    .sign-up{
+    .sign-in{
         margin-left: 45px;
         margin-top: 20px;
     }

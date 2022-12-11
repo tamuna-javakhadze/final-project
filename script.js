@@ -28,7 +28,7 @@ window.onscroll = function() {
 };
 
 // scroll - header color change
-let myNav = document.getElementById("nav");
+let myNav = document.getElementById("header");
 
 window.onscroll = function() {
   "use strict";
@@ -59,16 +59,16 @@ function smoothScroll(e) {
 }
 
 // burger bar
-let navigation = document.getElementById("nav")
+let navigation = document.getElementById("header");
 let burger = document.getElementById("burger");
-let headerWraper = document.getElementById("header-wraper1");
+let headerWraper = document.getElementById("header-wraper");
 let navSign = document.getElementById("navigation");
 let logo = document.getElementById("logo");
 
 burger.addEventListener("click", function(){
-    nav.classList.toggle("activeNav");
+    navigation.classList.toggle("activeNav");
     burger.classList.toggle("active-burger");
-    headerWraper.classList.toggle("activeWrap1");
+    headerWraper.classList.toggle("activeWrap");
     navSign.classList.toggle("avtiveNavSign");
     logo.classList.toggle("activeLogo");
 });
