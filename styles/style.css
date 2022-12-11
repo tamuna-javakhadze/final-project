@@ -86,7 +86,7 @@
 .burger{
     position: absolute;
     top: 10px;
-    right: 7.5%;
+    left: 7.5%;
     width: 35px;
     height: 40px;
     cursor: pointer;
@@ -109,6 +109,10 @@
 .line3{
     top: 80%;
 }
+.active-burger{
+    top: 10px;
+    left: 115px;
+}
 .active-burger .line1{
     top:50%;
     transform: rotate(45deg);
@@ -119,14 +123,6 @@
 }
 .active-burger .line2{
     display: none;
-}
-.bar{
-    width: 200px;
-    height: 300px;
-    position:fixed;
-    background-color: black;
-    top: 50px;
-    right: 0;
 }
 
 /* home */

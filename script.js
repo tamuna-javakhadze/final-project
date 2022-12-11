@@ -59,12 +59,18 @@ function smoothScroll(e) {
 }
 
 // burger bar
-let navigation = document.getElementById("navigation")
+let navigation = document.getElementById("nav")
 let burger = document.getElementById("burger");
+let headerWraper = document.getElementById("header-wraper1");
+let navSign = document.getElementById("navigation");
+let logo = document.getElementById("logo");
 
 burger.addEventListener("click", function(){
-    navigation.classList.toggle("activeNav");
+    nav.classList.toggle("activeNav");
     burger.classList.toggle("active-burger");
+    headerWraper.classList.toggle("activeWrap1");
+    navSign.classList.toggle("avtiveNavSign");
+    logo.classList.toggle("activeLogo");
 });
 
 // BMI calculator
