@@ -1,11 +1,17 @@
-/* breackpoints: 1024, 768, 480, 320 */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 @media (max-width: 1115px) {
     .ex-block:nth-child(3){
         margin-top: 50px;
     }
     .ex-block-wraper{
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     .name-avatar-wraper{
         width: 25%;
@@ -14,14 +20,21 @@
         margin-top: 50px;
     }
     .plans-wraper{
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     .flex{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .block{
         width: 100%;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         padding: 50px 0 50px 0;        
     }
     .section3-bg{
@@ -37,8 +50,13 @@
     }
     .wraper2{
         padding-top: 30px;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .social-icons-wraper{
         margin-top: 30px;
@@ -47,8 +65,13 @@
 
 @media (max-width: 1067px) {
     .wraper{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .text-wraper{
         max-width: 550px;
@@ -58,6 +81,18 @@
     }
     .input{
         padding: 0 10px 0 10px;
+    }
+    .input::-webkit-input-placeholder{
+        font-size: 10px;
+    }
+    .input::-moz-placeholder{
+        font-size: 10px;
+    }
+    .input:-ms-input-placeholder{
+        font-size: 10px;
+    }
+    .input::-ms-input-placeholder{
+        font-size: 10px;
     }
     .input::placeholder{
         font-size: 10px;
@@ -81,21 +116,37 @@
         width: 220px;
         height: 390px;
         background-color: rgb(34, 34, 34);
-        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        -webkit-box-shadow: 2px 2px 5px rgb(0, 0, 0);
+                box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         position: fixed;
         top: 0;
         left: -40px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
     }
     .header-wraper.activeWrap{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-top: 20px;
     }
     .navigation.avtiveNavSign{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-top: 20px;
     }
     .logo.activeLogo{
@@ -104,9 +155,13 @@
     .nav-ul{
         width: 100%;
         height: 200px;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         text-align: start;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         line-height: 30px;
         text-align: center;
         margin-left: 45px;
@@ -125,11 +180,27 @@
     .plan-box-wraper{
         max-width: 410px;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .input{
         padding: 0 20px 0 20px;
+    }
+    .input::-webkit-input-placeholder{
+        font-size: 12px;
+    }
+    .input::-moz-placeholder{
+        font-size: 12px;
+    }
+    .input:-ms-input-placeholder{
+        font-size: 12px;
+    }
+    .input::-ms-input-placeholder{
+        font-size: 12px;
     }
     .input::placeholder{
         font-size: 12px;
@@ -145,14 +216,26 @@
     }
     .wraper1{
         padding-top: 30px;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .contact-inf{
         margin-top: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 }
 
@@ -179,7 +262,10 @@
 
 @media (max-width: 768px) {
     .block{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .text-box:nth-child(2){
         margin-top: 50px;
@@ -206,8 +292,13 @@
 
 @media (max-width: 525px) {
     .all-input-wraper{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .text-box{
         padding: 0 5% 0 5%;

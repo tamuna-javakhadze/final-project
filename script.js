@@ -15,6 +15,7 @@ for (var i = 0; i < navItems.length; i++) {
   })
 }
 
+
 // scroll - header color smooth change
 var className = "inverted";
 var scrollTrigger = 30;
@@ -27,6 +28,7 @@ window.onscroll = function() {
   }
 };
 
+
 // scroll - header color change
 let myNav = document.getElementById("header");
 
@@ -38,6 +40,7 @@ window.onscroll = function() {
     myNav.classList.remove("scroll");
   }
 };
+
 
 // smooth scroll on click
 const links = document.querySelectorAll('.js-scroll');
@@ -58,6 +61,7 @@ function smoothScroll(e) {
     });
 }
 
+
 // burger bar
 let navigation = document.getElementById("header");
 let burger = document.getElementById("burger");
@@ -72,6 +76,7 @@ burger.addEventListener("click", function(){
     navSign.classList.toggle("avtiveNavSign");
     logo.classList.toggle("activeLogo");
 });
+
 
 // BMI calculator
 let heightInput = document.querySelector(".height-input-field");
@@ -103,6 +108,7 @@ calculateButton.addEventListener("click", ()=>{
         statement.innerText = "You need to fill both the fields";
     }
 });
+
 
 // slider
 let data = [
@@ -219,6 +225,7 @@ setInterval(()=> {
 
 slide();
 
+
 // fetch
 let currentPage = 1;
 let post = document.getElementById("post-wraper");
@@ -263,15 +270,16 @@ function getUsers(page){
     }
 })
 }
-
+// load more
 let loadMore = document.getElementById("loadmore");
 loadMore.addEventListener("click", function(){
     currentPage++;
     getUsers(currentPage);
     loadMore.remove();
-})
+});
 
 getUsers(currentPage);
+
 
 //  form
 let form = document.getElementById("form");
@@ -312,7 +320,7 @@ form.addEventListener("submit", function(event){
         error.password2 = "password doesn't match";
     }
 
-    // console.log(error);
+    console.log(error);
 
 // clear
     document.querySelectorAll(".error").forEach((item) => {
