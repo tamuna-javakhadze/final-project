@@ -292,12 +292,12 @@ form.addEventListener("submit", function(event){
 // email
     let emailVal = document.getElementById("email").value;
     if(emailVal == ""){
-        error.emailVal = "please fill out the field above";
+        error.email = "please fill out the field above";
     }
 // phone
     let phoneVal = document.getElementById("phone").value;
     if(phoneVal == ""){
-        error.phoneVal = "please fill out the field above";
+        error.phone = "please fill out the field above";
     }
 // password
     let passwordVal1 = document.getElementById("password1").value;
@@ -312,7 +312,7 @@ form.addEventListener("submit", function(event){
         error.password2 = "password doesn't match";
     }
 
-    console.log(error);
+    // console.log(error);
 
 // clear
     document.querySelectorAll(".error").forEach((item) => {
