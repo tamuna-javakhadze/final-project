@@ -1,18 +1,18 @@
-"use strict"
+"use strict";
 
 // active
-const navItems = document.querySelectorAll('.nav-li')
+const navItems = document.querySelectorAll('.nav-li');
 
 for (var i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener("click", function() {
     var current = document.querySelector(".active");
 
     if (current) {
-      current.classList.remove('active')
+      current.classList.remove('active');
     }
 
-    this.classList.add('active')
-  })
+    this.classList.add('active');
+  });
 }
 
 
@@ -33,7 +33,6 @@ window.onscroll = function() {
 let myNav = document.getElementById("header");
 
 window.onscroll = function() {
-  "use strict";
   if (document.body.scrollTop >= 160 || document.documentElement.scrollTop >= 160) {
     myNav.classList.add("scroll");
   } else {
@@ -46,7 +45,7 @@ window.onscroll = function() {
 const links = document.querySelectorAll('.js-scroll');
 
 links.forEach(function (elem) {
-    elem.addEventListener('click', smoothScroll)
+    elem.addEventListener('click', smoothScroll);
 });
 function smoothScroll(e) {
     e.preventDefault();
@@ -134,21 +133,21 @@ let data = [
     }
 ];
 
-const arrowLeft = document.getElementById("arrow-left")
-const arrowRight = document.getElementById("arrow-right")
+const arrowLeft = document.getElementById("arrow-left");
+const arrowRight = document.getElementById("arrow-right");
 const sliderContent = document.getElementById("slider-content");
 let sliderIndex = 0;
 let dotItem = document.getElementsByClassName("dot");
 
 function createDiv(){
     const div = document.createElement("div");
-    div.classList.add("slide")
+    div.classList.add("slide");
     return div;
 }
 
 function createImg(item){
     const img = document.createElement("div");
-    img.style.backgroundImage = `url(${item.url})`
+    img.style.backgroundImage = `url(${item.url})`;
     img.classList.add("bg-image-slider");
 
     img.classList.add("img-slider");
@@ -157,7 +156,7 @@ function createImg(item){
 
 function createTitle(item){
     const title = document.createElement("h3");
-    title.classList.add("slider-img-title")
+    title.classList.add("slider-img-title");
     title.textContent = item.title;
     return title;
 }
@@ -176,7 +175,7 @@ function createDots(){
             sliderIndex = id-1;
             slide();
         });
-    })
+    });
     return dotsParent;
 }
 
@@ -268,7 +267,7 @@ function getUsers(page){
         p.classList.add("text");
         post.appendChild(p);
     }
-})
+});
 }
 // load more
 let loadMore = document.getElementById("loadmore");
@@ -379,7 +378,7 @@ let emailField = document.getElementById("email");
 emailField.addEventListener("keyup", function(){
     let emailVal = document.getElementById("email").value;
     let errorSpan = document.getElementById("error-mail");
-    let emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    let emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(emailVal.match(emailPattern)){
         errorSpan.innerText = "email is valid";
