@@ -88,17 +88,19 @@ calculateButton.addEventListener("click", ()=>{
     round = Math.round(BMI);
     result.innerText = `BMI = ${round}`;
 
-    if(BMI < 18.5){
+    if((BMI < 18.5) && (BMI > 0)){
         statement.innerText = "Your BMI falls within the underweight range";    
     }else if((BMI > 18.5) && (BMI < 24.9)){
         statement.innerText = "Your BMI falls within the healthy weight range";
     }else if((BMI > 25) && (BMI < 29.9 )){
         statement.innerText = "Your BMI falls within the overweight range";
-    }else if((BMI > 29.9 )){
+    }else if((BMI > 29.9)){
         statement.innerText = "Your BMI falls within the obese range";
+    }else if(BMI = 0){
+        statement.innerText = "You need to fill both the fields";
     }else{
         result.innerText = " ";
-        statement.innerText = "You need to fill both the fields first";
+        statement.innerText = "You need to fill both the fields";
     }
 });
 
@@ -332,8 +334,9 @@ form.addEventListener("submit", function(event){
 });
 
 // password show
+// first password
 let password = document.getElementById("password1");
-let icon = document.getElementById("show-icon");
+let icon = document.getElementById("show-icon1");
 
 icon.addEventListener("click", function(){
     if(password.type == "password"){
@@ -344,6 +347,21 @@ icon.addEventListener("click", function(){
         password.setAttribute("type", "password");
         icon.classList.add("fa-eye");
         icon.classList.remove("fa-eye-slash");
+    }
+});
+// repeat
+let password2 = document.getElementById("password2");
+let icon2 = document.getElementById("show-icon2");
+
+icon2.addEventListener("click", function(){
+    if(password2.type == "password"){
+        password2.setAttribute("type", "text");
+        icon2.classList.remove("fa-eye");
+        icon2.classList.add("fa-eye-slash");
+    }else{
+        password2.setAttribute("type", "password");
+        icon2.classList.add("fa-eye");
+        icon2.classList.remove("fa-eye-slash");
     }
 });
 
