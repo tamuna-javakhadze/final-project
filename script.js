@@ -92,7 +92,7 @@ calculateButton.addEventListener("click", ()=>{
     round = Math.round(BMI);
     result.innerText = `BMI = ${round}`;
 
-    if((BMI < 18.5) && (BMI > 0)){
+    if((BMI < 18.5)){
         statement.innerText = "Your BMI falls within the underweight range";    
     }else if((BMI > 18.5) && (BMI < 24.9)){
         statement.innerText = "Your BMI falls within the healthy weight range";
