@@ -157,7 +157,7 @@
 .home-bg{
     background-image: url(../images/header-background.jpg);
     width: 100%;
-    height: 657px;
+    height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -674,6 +674,7 @@
     background-color: white;
 }
 #post-wraper{
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -681,6 +682,7 @@
         flex-wrap: wrap;
 }
 .name-avatar-wraper{
+    width: 16.666%;
     padding: 0 35px 0 35px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -690,7 +692,7 @@
 }
 .user-name{
     margin-top: 50px;
-    font-size: 18px;
+    font-size: 17.7px;
     font-family: 'Cormorant Garamond', serif;
     color: rgb(255, 60, 0);
     text-align: center;
