@@ -88,7 +88,7 @@ let BMI, round, height, weight;
 calculateButton.addEventListener("click", ()=>{
     height = heightInput.value;
     weight = weightInput.value;
-    BMI = weight/(height**2); 
+    BMI = weight/((height/100)**2); 
     round = Math.round(BMI);
     result.innerText = `BMI = ${round}`;
 
